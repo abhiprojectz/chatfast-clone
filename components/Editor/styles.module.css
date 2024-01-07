@@ -1,0 +1,22 @@
+.wrapper {
+  padding: 5px;
+}
+
+.label {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.editor {
+  height: 460px;
+  border: 0 !important;
+  border-color: transparent !important;
+}
+
+.btn {
+  border: none;
+  color: #fff;
+  border-radius: 20px;
+  padding: 0.6rem 2rem;
+  background-color: royalblue;
+}
