@@ -54,7 +54,7 @@ export function NavBar({
           {user ? (
             <UserAccountNav user={user} />
           ) : (
-            <Link href={"/auth/signin"}>
+            <Link href={"/register"}>
                 <Button
                 className="px-3"
                 variant="default"

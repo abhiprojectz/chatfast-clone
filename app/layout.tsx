@@ -1,10 +1,11 @@
 import "./globals.css";
-import { NextAuthProvider } from "@/components/providers";
 import { NavBar } from "@/components/layout/navbar";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { ThemeProvider } from "@/components/theme-provider"
-
-import { getCurrentUser } from "@/lib/session";
+// import { getCurrentUser } from "@/lib/session";
+import { NextAuthProvider } from "./providers";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/lib/auth";
 
 export const metadata = {
   title: "Create Next App",
@@ -16,11 +17,8 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const user = await getCurrentUser();
-
-  if (!user) {
-    return null;
-  }
+  const session = await getServerSession(authOptions);
+  const user = session?.user;
 
   return (
     <html lang="en">
