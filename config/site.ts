@@ -1,7 +1,7 @@
 import { SiteConfig } from "@/types";
 import env from "@/env";
 
-const site_url = env.NEXT_PUBLIC_APP_URL;
+const site_url = env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
 
 export const siteConfig: SiteConfig = {
   name: "ChatFast",

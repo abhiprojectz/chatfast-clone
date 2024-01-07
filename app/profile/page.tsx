@@ -1,6 +1,6 @@
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
-
+import Image from "next/image";
 export default async function Profile() {
   const session = await getServerSession(authOptions);
   const user = session?.user;
@@ -18,7 +18,7 @@ export default async function Profile() {
             ) : (
               <div className="flex items-center gap-8">
                 <div>
-                  <img
+                  <Image
                     src={user.image ? user.image : "/images/default.png"}
                     className="max-h-36"
                     alt={`profile photo of ${user.name}`}

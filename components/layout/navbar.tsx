@@ -12,7 +12,7 @@ import { MainNav } from "./main-nav";
 import { UserAccountNav } from "./user-account-nav";
 
 interface NavBarProps {
-  user: Pick<User, "name" | "image" | "email"> | undefined;
+  user: Pick<User, "name" | "email"> | undefined;
   items?: MainNavItem[];
   children?: React.ReactNode;
   rightElements?: React.ReactNode;
@@ -60,7 +60,7 @@ export function NavBar({
                 variant="default"
                 size="sm"
               >
-                Sign In
+                Sign In 
               </Button>
             </Link>
           )}

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { CreditCard, LayoutDashboard, LogOut, Settings } from "lucide-react";
-
+import type { User } from "next-auth";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,14 +13,8 @@ import {
 import { UserAvatar } from "@/components/shared/user-avatar";
 
 
-interface User {
-  name: string;
-  image: string; // Add the 'image' property
-  email: string; // Add the 'email' property
-}
-
 interface UserAccountNavProps extends React.HTMLAttributes<HTMLDivElement> {
-  user: Pick<User, "name" | "image" | "email">;
+  user: Pick<User, "name" | "email">;
 }
 
 export function UserAccountNav({ user }: UserAccountNavProps) {
@@ -28,7 +22,7 @@ export function UserAccountNav({ user }: UserAccountNavProps) {
     <DropdownMenu>
       <DropdownMenuTrigger>
         <UserAvatar
-          user={{ name: user?.name || null, image: user?.image || null }}
+          user={{ name: user?.name || "john"}}
           className="h-8 w-8"
         />
       </DropdownMenuTrigger>

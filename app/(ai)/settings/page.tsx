@@ -55,7 +55,7 @@ export default function page() {
                                 <div className="flex-1 space-y-4  p-4 md:p-8 pt-6">
                                     <CardHeader>
                                         <CardTitle>Settings</CardTitle>
-                                        <CardDescription>Your Bot's settings</CardDescription>
+                                        <CardDescription>Your Bots settings</CardDescription>
                                     </CardHeader>
 
                                     <div className="flex items-center justify-center h-full">
@@ -268,7 +268,6 @@ export default function page() {
                                                         <Button>Update</Button>
                                                     </CardFooter>
                                                 </Card>
-
                                             </TabsContent>
                                         </Tabs>
                                     </div>

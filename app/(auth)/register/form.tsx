@@ -2,7 +2,7 @@
 
 import { signIn } from "next-auth/react";
 import { ChangeEvent, useState } from "react";
-
+import Image from "next/image";
 export const RegisterForm = () => {
   const [loading, setLoading] = useState(false);
   const [formValues, setFormValues] = useState({
