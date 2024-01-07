@@ -4,7 +4,6 @@ import { NavBar } from "@/components/layout/navbar";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { ThemeProvider } from "@/components/theme-provider"
 
-import { notFound } from "next/navigation";
 import { getCurrentUser } from "@/lib/session";
 
 export const metadata = {
@@ -20,7 +19,7 @@ export default async function RootLayout({
   const user = await getCurrentUser();
 
   if (!user) {
-    return notFound();
+    return null;
   }
 
   return (
